@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: loom-gateway
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: loom-service
+            uri: http://localhost:8080
+            predicates:
+              - Path=/**
+  threads:
+    virtual:
+      enabled: true

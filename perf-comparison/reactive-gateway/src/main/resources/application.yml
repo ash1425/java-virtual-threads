@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: reactive-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: backend
+          uri: http://localhost:8080
+          predicates:
+            - Path=/**
